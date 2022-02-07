@@ -1,0 +1,37 @@
+@media (min-width:700px) {
+  .card-div{
+    width:100%;
+  }
+
+  .container-card{
+    width:20%;
+    margin: auto;
+    padding: 10px 0px 0px 10px;
+  }
+}
+.card-div{
+  margin: 7px;
+}
+
+.task-details{
+  text-align:left;
+  width: 100%;
+}
+
+.completed{
+  text-decoration:line-through;
+}
+.container-card {
+  border-radius:10px;
+}
+
+.task-title {
+  margin-bottom: 4px;
+  font-size: 18px;
+}
+
+.task-date {
+  margin-bottom: 3px;
+  color:rgba(0,0,0,.54);
+  font-size: 10px;
+}

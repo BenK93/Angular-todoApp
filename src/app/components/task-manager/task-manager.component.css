@@ -1,0 +1,42 @@
+@media (min-width:700px) {
+
+  .input-container{
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+}
+.input-container{
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+}
+.task-app{
+  /*padding: 500px;*/
+}
+
+.example-form-field {
+  width: 300px;
+  padding: 0px;
+}
+.tasks-container{
+  height:100%;
+}
+
+.container-input-task{
+
+}
+
+.form-horizontal{
+
+}
+
+.add-task-btn{
+  width: 300px;
+  display: inline-grid;
+}
+
+.form-horizontal{
+  flex-direction: row;
+}

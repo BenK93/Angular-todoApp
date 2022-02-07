@@ -1,0 +1,26 @@
+<script src="task-manager.component.ts"></script>
+<div class="tasks-container">
+  <div>
+    <app-task class="task-app" *ngFor="let task of tasks; let i = index;" title="{{task.title}}"
+              (onDeleteTask)="deleteTask(i)"
+              completed="{{task.completed}}"
+              index="{{i}}"
+              date="{{task.time}}"
+              time="{{task.date}}"
+    ></app-task>
+  </div>
+  <div class="input-container">
+    <form (submit)="addTask()" class="form-horizontal">
+      <div>
+        <mat-form-field class="example-form-field" appearance="outline">
+          <mat-label>Enter a Task</mat-label>
+          <input matInput type="text" name="value" [(ngModel)]="value">
+          <button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+      <app-button class="add-task-btn" [title]="'Add Task'"></app-button>
+    </form>
+  </div>
+</div>

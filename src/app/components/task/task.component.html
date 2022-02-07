@@ -1,0 +1,15 @@
+<div class="card-div">
+  <mat-card class="container-card" (dblclick)="setAsDone()">
+    <mat-card-title-group>
+      <div class="task-details">
+        <div class="task-title completed" *ngIf="!completed">{{title}}</div>
+        <div class="task-title todo" *ngIf="completed">{{title}}</div>
+        <div class="task-date" style="font-size:13px">{{date}} - {{time}}</div>
+      </div>
+      <button (click)="removeTask(index)" matSuffix mat-icon-button aria-label="Clear">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-card-title-group>
+  </mat-card>
+</div>
+
