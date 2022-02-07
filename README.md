@@ -1,27 +1,6 @@
 # TodoApp
+* Click On Cross To Delete Task
+* Double Click Marking Task As Done
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.3.
+![WhatsApp Image 2022-02-07 at 22 31 53](https://user-images.githubusercontent.com/21170255/152867841-a342d665-4209-4d85-bae7-bd0fe9f3fda6.jpeg)
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
