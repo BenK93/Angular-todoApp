@@ -14,7 +14,6 @@ export class TaskManagerComponent implements OnInit {
 
   ngOnInit(): void {
     const date = new Date();
-    console.log(date.toLocaleTimeString());
     this.tasks = [{
       title: 'example task',
       date: date.toLocaleDateString(),
@@ -25,7 +24,6 @@ export class TaskManagerComponent implements OnInit {
 
 
   addTask(): void {
-    console.log(this.tasks);
     const date = new Date();
     this.tasks.push({
       title: this.value,
@@ -37,8 +35,6 @@ export class TaskManagerComponent implements OnInit {
   }
 
   deleteTask(id: number): void {
-    console.log(id);
-    console.log(this.tasks);
     this.tasks = this.tasks.filter((t, i) => i !== id);
   }
 

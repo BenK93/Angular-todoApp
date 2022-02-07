@@ -1,41 +1,44 @@
-@media (min-width:700px) {
+@media (min-width: 700px) {
 
-  .input-container{
+  .input-container {
     margin: auto;
     padding: 20px;
     text-align: center;
   }
 }
-.input-container{
+
+.input-container {
   position: absolute;
   bottom: 0px;
   text-align: center;
   width: 100%;
 }
-.task-app{
+
+.task-app {
 }
 
 .example-form-field {
   width: 300px;
   padding: 0px;
 }
-.tasks-container{
-  height:100%;
+
+.tasks-container {
+  height: 100%;
 }
 
-.container-input-task{
-
-}
-
-.form-horizontal{
+.container-input-task {
 
 }
 
-.add-task-btn{
+.form-horizontal {
+
+}
+
+.add-task-btn {
   width: 300px;
   display: inline-grid;
 }
 
-.form-horizontal{
+.form-horizontal {
   flex-direction: row;
 }
