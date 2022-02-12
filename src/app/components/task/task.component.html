@@ -2,11 +2,10 @@
   <mat-card class="container-card" (dblclick)="setAsDone()">
     <mat-card-title-group>
       <div class="task-details">
-        <div class="task-title completed" *ngIf="!completed">{{title}}</div>
-        <div class="task-title todo" *ngIf="completed">{{title}}</div>
-        <div class="task-date" style="font-size:13px">{{date}} - {{time}}</div>
+        <div class="task-title {{task.completed ? 'completed' : 'todo'}}" >{{task.title}}</div>
+        <div class="task-date" style="font-size:13px">{{task.date | myDatePipe}} - {{ task.date | date:'shortTime'}}</div>
       </div>
-      <button (click)="removeTask(index)" matSuffix mat-icon-button aria-label="Clear">
+      <button (click)="removeTask(task)" matSuffix mat-icon-button>
         <mat-icon>close</mat-icon>
       </button>
     </mat-card-title-group>

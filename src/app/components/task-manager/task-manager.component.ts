@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {Task} from '../../../utils/Task';
+import {Component, OnInit} from '@angular/core';
+import {TodoStoreService} from '../../state/todo-store.service';
+import {MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-task-manager',
@@ -7,35 +8,22 @@ import {Task} from '../../../utils/Task';
   styleUrls: ['./task-manager.component.css']
 })
 export class TaskManagerComponent implements OnInit {
-  tasks: Task[];
   value = '';
-  constructor() {
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+
+  constructor(public _snackBar: MatSnackBar, public todoStore: TodoStoreService) {
   }
 
   ngOnInit(): void {
-    const date = new Date();
-    this.tasks = [{
-      title: 'example task',
-      date: date.toLocaleDateString(),
-      time: date.toLocaleTimeString(),
-      completed: false
-    }];
   }
 
-
-  addTask(): void {
-    const date = new Date();
-    this.tasks.push({
-      title: this.value,
-      date: date.toLocaleDateString(),
-      time: date.toLocaleTimeString(),
-      completed: false
+  openSnackBar(message: string): any {
+    this._snackBar.open(message, 'Adding Task', {
+      duration: 3000,
+      horizontalPosition: this.horizontalPosition,
+      verticalPosition: this.verticalPosition,
     });
-    this.value = '';
-  }
-
-  deleteTask(id: number): void {
-    this.tasks = this.tasks.filter((t, i) => i !== id);
   }
 
 }

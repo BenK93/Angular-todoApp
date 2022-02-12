@@ -90,7 +90,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/styles/styles.scss"
             ],
             "scripts": []
           }
@@ -123,5 +124,10 @@
       }
     }
   },
-  "defaultProject": "todoApp"
+  "defaultProject": "todoApp",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
