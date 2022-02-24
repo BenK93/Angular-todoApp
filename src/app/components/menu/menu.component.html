@@ -3,13 +3,13 @@
     <button mat-icon-button class="example-icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Todo App</span>
+    <span (click)="navigateToDo()">Todo App</span>
     <div>
-    <button mat-icon-button class="example-icon favorite-icon" >
-      <mat-icon>favorite</mat-icon>
+    <button mat-icon-button class="example-icon favorite-icon" (click)="navigateToDo()">
+      <mat-icon>brush</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" >
-      <mat-icon>share</mat-icon>
+    <button mat-icon-button class="example-icon" (click)="navigateToLogin()">
+      <mat-icon>account_circle</mat-icon>
     </button>
     </div>
   </mat-toolbar>

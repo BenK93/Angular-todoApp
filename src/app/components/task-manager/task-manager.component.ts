@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {TodoStoreService} from '../../state/todo-store.service';
 import {MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition} from '@angular/material/snack-bar';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-task-manager',
@@ -26,4 +27,7 @@ export class TaskManagerComponent implements OnInit {
     });
   }
 
+  drop(event: CdkDragDrop<string[]>): any {
+    moveItemInArray(this.todoStore.tasks, event.previousIndex, event.currentIndex);
+  }
 }

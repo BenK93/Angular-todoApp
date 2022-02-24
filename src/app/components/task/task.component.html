@@ -1,11 +1,11 @@
-<div class="card-div">
+<div cdkDrag class="card-div">
   <mat-card class="container-card" (dblclick)="setAsDone()">
     <mat-card-title-group>
       <div class="task-details">
-        <div class="task-title {{task.completed ? 'completed' : 'todo'}}" >{{task.title}}</div>
+        <div class="task-title {{task.completed ? 'completed' : 'todo'}}" >{{task.title}}<mat-icon *ngIf="task.completed">check</mat-icon></div>
         <div class="task-date" style="font-size:13px">{{task.date | myDatePipe}} - {{ task.date | date:'shortTime'}}</div>
       </div>
-      <button (click)="removeTask(task)" matSuffix mat-icon-button>
+      <button (click)="openDialog(task)" matSuffix mat-icon-button>
         <mat-icon>close</mat-icon>
       </button>
     </mat-card-title-group>

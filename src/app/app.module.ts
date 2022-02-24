@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonComponent } from './components/commons/button/button.component';
 import { TaskManagerComponent } from './components/task-manager/task-manager.component';
-import { TaskComponent } from './components/task/task.component';
 import { MenuComponent } from './components/menu/menu.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -17,6 +16,11 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import { DatePipe } from './pipes/date-pipe.pipe';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import { MatDialogModule} from '@angular/material/dialog';
+import { BasicDialogComponent } from './components/commons/basic-dialog/basic-dialog.component';
+import {TaskComponent} from './components/task/task.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +29,18 @@ import { DatePipe } from './pipes/date-pipe.pipe';
     TaskManagerComponent,
     TaskComponent,
     MenuComponent,
-    DatePipe
+    DatePipe,
+    BasicDialogComponent,
+    LoginComponent,
   ],
   imports: [
     MatSnackBarModule,
+    DragDropModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    MatDialogModule,
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,

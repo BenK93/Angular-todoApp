@@ -1,6 +1,6 @@
 <script src="task-manager.component.ts"></script>
 <div class="tasks-container">
-  <div>
+  <div cdkDropList (cdkDropListDropped)="drop($event)">
     <app-task class="task-app" *ngFor="let task of todoStore.tasks; let i = index;"
               (taskChange)="todoStore.deleteTask(task)"
               [task]="task"
@@ -8,7 +8,7 @@
     ></app-task>
   </div>
   <div class="input-container">
-    <form (submit)="todoStore.addTask(value)" (keyup.enter)="todoStore.addTask(value)" class="form-horizontal">
+    <form (submit)="todoStore.addTask(value); value=''" (keyup.enter)="todoStore.addTask(value)" class="form-horizontal">
       <div>
         <mat-form-field class="example-form-field" appearance="outline">
           <mat-label>Enter a Task</mat-label>
