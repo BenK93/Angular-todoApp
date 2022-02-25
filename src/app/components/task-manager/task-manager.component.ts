@@ -6,7 +6,7 @@ import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 @Component({
   selector: 'app-task-manager',
   templateUrl: './task-manager.component.html',
-  styleUrls: ['./task-manager.component.css']
+  styleUrls: ['./task-manager.component.scss']
 })
 export class TaskManagerComponent implements OnInit {
   value = '';

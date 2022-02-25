@@ -1,3 +1,17 @@
+::ng-deep .check-icon{
+  color:#2a7d2a;
+}
+::ng-deep .close-icon{
+  color:#bf0303;
+}
+
+@media (max-width:700px) {
+
+  .container-card {
+    width: 100%;
+  }
+}
+
 @media (min-width:700px) {
   .card-div{
     width:100%;
