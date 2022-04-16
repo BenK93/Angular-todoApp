@@ -3,12 +3,12 @@
     <button mat-icon-button class="example-icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <span (click)="navigateToDo()">Todo App</span>
+    <span (click)="navigateTo('/')">Todo App</span>
     <div>
-    <button mat-icon-button class="example-icon favorite-icon" (click)="navigateToDo()">
+    <button mat-icon-button class="example-icon favorite-icon" (click)="navigateTo('/')">
       <mat-icon>brush</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" (click)="navigateToLogin()">
+    <button mat-icon-button class="example-icon" (click)="navigateTo('/login')">
       <mat-icon>account_circle</mat-icon>
     </button>
     </div>

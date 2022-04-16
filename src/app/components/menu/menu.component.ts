@@ -14,13 +14,10 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigateToLogin(): any {
-    this.router.navigate(['/login']);
+  navigateTo(path: string): any {
+    this.router.navigate([path]);
   }
 
-  navigateToDo(): any {
-    this.router.navigate(['/']);
-  }
 
 
 }
