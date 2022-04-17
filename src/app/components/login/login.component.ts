@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
@@ -7,9 +7,9 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-
+  @Output() loginFunction = new EventEmitter<any>();
   public loginValid = true;
-  public username = '';
+  public email = '';
   public password = '';
 
   constructor(private router: Router) {
@@ -19,10 +19,9 @@ export class LoginComponent implements OnInit {
   }
 
   public onSubmit(): void {
-    if (this.username === 'example@gmail.com' && this.password === '123123') {
-      this.router.navigate(['']);
-    } else {
-      this.loginValid = false;
-    }
+    this.loginFunction.emit({
+      email: this.email,
+      password: this.password
+    });
   }
 }

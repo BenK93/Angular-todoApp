@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {Task} from '../../../interfaces/Task';
+import {Task} from '../menu/interfaces/Task.interface';
 import {MatDialog} from '@angular/material/dialog';
 import {BasicDialogComponent} from '../commons/basic-dialog/basic-dialog.component';
 
