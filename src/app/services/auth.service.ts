@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {
   Auth,
-  GoogleAuthProvider,
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut

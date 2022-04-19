@@ -1,9 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { AuthRoutingModule } from './auth-routing.module';
+import {AuthRoutingModule} from './auth-routing.module';
 import {RegisterComponent} from '../containers/register/register.component';
-import { LoginComponent } from '../containers/login/login.component';
+import {LoginComponent} from '../containers/login/login.component';
 import {MatCardModule} from '@angular/material/card';
 import {FormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';

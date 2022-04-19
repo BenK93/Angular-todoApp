@@ -20,13 +20,10 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatDialogModule} from '@angular/material/dialog';
 import {BasicDialogComponent} from './components/commons/basic-dialog/basic-dialog.component';
 import {TaskComponent} from './components/task/task.component';
-import {LoginComponent} from './containers/login/login.component';
 import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
 import {environment} from '../environments/environment';
-import {provideAuth, getAuth} from '@angular/fire/auth';
-import {RegisterComponent} from './containers/register/register.component';
+import {getAuth, provideAuth} from '@angular/fire/auth';
 import {CommonModule} from '@angular/common';
-import {DashboardModule} from './dashboard/dashboard.module';
 import {HttpClientModule} from '@angular/common/http';
 
 
