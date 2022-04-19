@@ -1,0 +1,17 @@
+mat-card {
+  max-width: 400px;
+  margin: 2em auto;
+  text-align: center;
+}
+
+mat-form-field {
+  display: block;
+}
+
+.buttons-login-container {
+  justify-content: space-around;
+  width: 70%;
+  flex-direction: row;
+  display: flex;
+  margin: auto;
+}

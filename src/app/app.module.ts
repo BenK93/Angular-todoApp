@@ -5,8 +5,8 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {ButtonComponent} from './components/commons/button/button.component';
-import {TaskManagerComponent} from './components/task-manager/task-manager.component';
-import {MenuComponent} from './components/menu/menu.component';
+import {TaskManagerComponent} from './containers/task-manager/task-manager.component';
+import {MenuComponent} from './containers/menu/menu.component';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
@@ -20,11 +20,14 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatDialogModule} from '@angular/material/dialog';
 import {BasicDialogComponent} from './components/commons/basic-dialog/basic-dialog.component';
 import {TaskComponent} from './components/task/task.component';
-import {LoginComponent} from './components/login/login.component';
+import {LoginComponent} from './containers/login/login.component';
 import {initializeApp, provideFirebaseApp} from '@angular/fire/app';
 import {environment} from '../environments/environment';
 import {provideAuth, getAuth} from '@angular/fire/auth';
-import {RegisterComponent} from './components/register/register.component';
+import {RegisterComponent} from './containers/register/register.component';
+import {CommonModule} from '@angular/common';
+import {DashboardModule} from './dashboard/dashboard.module';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -36,12 +39,13 @@ import {RegisterComponent} from './components/register/register.component';
     MenuComponent,
     DatePipe,
     BasicDialogComponent,
-    LoginComponent,
-    RegisterComponent,
   ],
   imports: [
+    MatToolbarModule,
+    HttpClientModule,
     MatSnackBarModule,
     DragDropModule,
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -58,7 +62,9 @@ import {RegisterComponent} from './components/register/register.component';
   ],
   providers: [],
   exports: [
-    ButtonComponent
+    ButtonComponent,
+    TaskComponent,
+    TaskManagerComponent,
   ],
   bootstrap: [AppComponent]
 })

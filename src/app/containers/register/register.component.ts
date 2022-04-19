@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {LoginData} from '../menu/interfaces/login.interface';
+import {LoginData} from '../../interfaces/Login.interface';
 import {AuthService} from '../../services/auth.service';
 import {Router} from '@angular/router';
 
@@ -9,6 +9,9 @@ import {Router} from '@angular/router';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
+  public loginValid = true;
+  public email = '';
+  public password = '';
 
   constructor(
     private authService: AuthService,
@@ -19,9 +22,12 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  register(data: LoginData): any {
+  register(): any {
     this.authService
-      .register(data)
+      .register({
+        email: this.email,
+        password: this.password
+      })
       .then(() => this.router.navigate(['/tasks']))
       .catch((e) => console.log(e.message));
   }
